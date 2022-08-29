@@ -1,6 +1,8 @@
 package com.codewithdurgesh.blog.security;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Iterator;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -35,7 +37,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 //		1. get token 
 
 		String requestToken = request.getHeader("Authorization");
+		Enumeration<String> headerNames = request.getHeaderNames();
 
+		while(headerNames.hasMoreElements())
+		{
+			System.out.println(headerNames.nextElement());
+		}
 		// Bearer 2352523sdgsg
 
 		System.out.println(requestToken);

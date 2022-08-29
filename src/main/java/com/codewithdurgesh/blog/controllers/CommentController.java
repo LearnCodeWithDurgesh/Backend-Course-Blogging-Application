@@ -15,7 +15,7 @@ import com.codewithdurgesh.blog.payloads.CommentDto;
 import com.codewithdurgesh.blog.services.CommentService;
 
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/v1/")
 public class CommentController {
 
 	@Autowired

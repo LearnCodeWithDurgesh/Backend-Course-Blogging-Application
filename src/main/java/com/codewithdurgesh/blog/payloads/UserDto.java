@@ -11,6 +11,7 @@ import javax.validation.constraints.Size;
 
 import com.codewithdurgesh.blog.entities.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,10 +29,11 @@ public class UserDto {
 	private String name;
 
 	@Email(message = "Email address is not valid !!")
+	@NotEmpty(message = "Email is required !!")
 	private String email;
 
 	@NotEmpty
-	@Size(min = 3, max = 10, message = "Passoword must be min of 3 chars and max of 10 chars !!")
+	@Size(min = 3, max = 10, message = "Password must be min of 3 chars and max of 10 chars !!")
 
 
 	private String password;
@@ -42,5 +44,14 @@ public class UserDto {
 	private Set<RoleDto> roles = new HashSet<>();
 	
 	
+	@JsonIgnore
+	public String getPassword() {
+		return this.password;
+	}
+	
+	@JsonProperty
+	public void setPassword(String password) {
+		this.password=password;
+	}
 
 }
