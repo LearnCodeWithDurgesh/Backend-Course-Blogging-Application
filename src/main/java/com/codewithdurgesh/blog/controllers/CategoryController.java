@@ -67,7 +67,6 @@ public class CategoryController {
 	// get all
 	@GetMapping("/")
 	public ResponseEntity<List<CategoryDto>> getCategories() {
-
 		List<CategoryDto> categories = this.categoryService.getCategories();
 		return ResponseEntity.ok(categories);
 	}
