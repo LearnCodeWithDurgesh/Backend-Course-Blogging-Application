@@ -48,6 +48,8 @@
 
 
 
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -79,6 +81,14 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+
+		</dependency>
+
 
 
 		<dependency>
